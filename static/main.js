@@ -88,10 +88,6 @@ function initializeTelegram() {
                 if (intervalClickCount > 0) {
                     sendClickData(user.id, intervalClickCount);
                     intervalClickCount = 0;
-                    readClickData(user.id).then(clickCount => {
-                        localClickCount = clickCount;
-                        clickCountDisplay.textContent = `ИванИванов: ${clickCount}`;
-                    });
                 }
             }, 5000);
 
